@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{!-- HEADER START--}}
+ <head>
+     {{>header_links}}
+     <link rel="stylesheet" href="css/weather_page.css">
+ </head>
+  {{!-- HEADER END--}}
+<body>
+   {{!--NAVBAR START  --}}
+   {{>navbar}}
+   {{!--NAVBAR END  --}}
+    <!-- MAIN HEADER -->
+
+                <div class="main_row">
+                    <div class="main_content">
+                        <form action="" class="temp_form">
+                            <input type="text" name="" id="cityName" placeholder="Enter city name" autocomplete="off">
+                        <input type="submit" value="search" id="submitBtn">
+                        </form>
+                    </div>
+                    <div class="temp_information">
+                        <div class="top_layer">
+                            <p id="day">{{day}}</p>
+                            <p id="today_data">{{time}}{{m}}</p>
+                        </div>
+                        <div class="main_layer">
+                            <p id="city_name"></p>
+                            <div class="middle_layer data_hide">
+                                <p id="temp">  &deg;C</p>
+                                <p id="temp_status">
+                                    <i class="fa fa-cloud"></i>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+ 
+
+   {{!-- FOOTER CODE --}}
+   {{>footer}}
+    {{!-- FOOTER CODE END --}}
+    <script src="js/main.js"></script>
+</body>
+</html>
