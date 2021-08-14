@@ -3,7 +3,6 @@ const app=express();
 const path=require("path");
 const hbs=require("hbs");
 const port=process.env.PORT || 3000;
-const host =process.env.host || "127.0.0.1";
 const staticPath=path.join(__dirname,"../public");
 const templatePath=path.join(__dirname,"../templates/views");
 const partialPath=path.join(__dirname,"../templates/partials");
@@ -65,6 +64,6 @@ app.get("/weather/*",(req,res)=>{
 app.get("*",(req,res)=>{
     res.render("404 ERROR page");
 });
-app.listen(port,host,()=>{
+app.listen(port,()=>{
     console.log(`Server is running at Port:${port}`);
 });
